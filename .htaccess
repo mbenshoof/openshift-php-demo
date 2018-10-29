@@ -1,4 +1,0 @@
-Options +FollowSymLinks
-RewriteEngine On
-
-RewriteRule ^hello-test/(.*)$ /$1 [R=301,NC,L]
