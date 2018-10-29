@@ -13,7 +13,7 @@ if ($connection->connect_errno) {
 }
 
 /* Select queries return a resultset */
-if ($result = $mysqli->query("SELECT * FROM mytable")) {
+if ($result = $connection->query("SELECT * FROM mytable")) {
     printf("Select returned %d rows.\n", $result->num_rows);
 
     dar($result);
