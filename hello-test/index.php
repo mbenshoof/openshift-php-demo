@@ -4,6 +4,6 @@
  </head>
  <body>
  <?php echo '<p>Hello World</p>'; ?> 
- <?php echo '<p>Uno mas with a commit!!'; ?>
+ <?php echo '<p>This is in the subdir'; ?>
  </body>
 </html>
