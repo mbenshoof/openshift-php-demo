@@ -16,13 +16,16 @@ if ($connection->connect_errno) {
 if ($result = $connection->query("SELECT * FROM mytable")) {
     printf("Select returned %d rows.\n", $result->num_rows);
 
-    dar($result);
-
+    
+    echo "<p><strong>Num Rows:</strong> " . $result->num_rows . "</strong></p>";
+    echo "<ul>";
 
     while ($row = $result->fetch_object()){
        dar($row);
+       echo "<li>" . $row->id . " : " . $row->val . "</li>";
     }
 
+    echo "</ul>";
     /* free result set */
     $result->close();
 }
@@ -32,9 +35,9 @@ $connection->close();
 
 function dar($data) {
 
-	echo "<pre>";
-	var_dump($data);
-	echo "</pre>";
+    echo "<pre>";
+    var_dump($data);
+    echo "</pre>";
 }
 
 ?>
